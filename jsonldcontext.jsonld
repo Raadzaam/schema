@@ -4,6 +4,12 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "prov": "http://www.w3.org/ns/prov#",
         "schema": "https://schema.org/",
+        "Thing": {
+            "@id": "schema:Thing"
+        },
+        "Action": {
+            "@id": "schema:Action"
+        },
         "Event": {
             "@id": "schema:Event"
         },
@@ -21,6 +27,12 @@
         },
         "VideoObject": {
             "@id": "schema:VideoObject"
+        },
+        "CreativeWork": {
+            "@id": "schema:CreativeWork"
+        },
+        "ItemList": {
+            "@id": "schema:ItemList"
         },
         "Vergadering": {
             "@id": "raad:Vergadering"
