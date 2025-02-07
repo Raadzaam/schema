@@ -253,7 +253,7 @@
   rdfs:label "indiener persoon" ;
   rdfs:comment "De partij van een raadslid." ;
   rdfs:domain :Raadslid ;
-  rdfs:range raad:Partij .
+  rdfs:range :Partij .
 
 :videoOpname a rdf:Property ;
   rdfs:label "videoOpname" ;
@@ -272,7 +272,7 @@
   rdfs:label "stemObject" ;
   rdfs:comment "Raadsintrument waarover gestemd wordt." ;
   rdfs:domain :Stemming ;
-  rdfs:range raad:Raadsinstrument .
+  rdfs:range :Raadsinstrument .
 
 :stem a rdf:Property ;
   rdfs:label "stem" ;
