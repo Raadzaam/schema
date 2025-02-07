@@ -151,8 +151,65 @@
         "IndienersLijst": {
             "@id": "raad:Indienerslijst"
         },
+        "type": {
+            "@id": "rdf:type"
+        },
+        "name": {
+            "@id": "schema:name"
+        },
+        "identifier": {
+            "@id": "schema:identifier"
+        },
+        "url": {
+            "@id": "schema:url"
+        },
+        "about": {
+            "@id": "schema:about"
+        },
+        "description": {
+            "@id": "schema:description"
+        },
+        "isPartOf": {
+            "@id": "schema:isPartOf"
+        },
         "agent": {
             "@id": "schema:agent"
+        },
+        "item": {
+            "@id": "schema:item"
+        },
+        "position": {
+            "@id": "schema:postion"
+        },
+        "itemListElement": {
+            "@id": "schema:itemListElement"
+        },
+        "object": {
+            "@id": "schema:object"
+        },
+        "startDate": {
+            "@id": "schema:startDate"
+        },
+        "endDate": {
+            "@id": "schema:endDate"
+        },
+        "startTime": {
+            "@id": "schema:startTime"
+        },
+        "endTime": {
+            "@id": "schema:endTime"
+        },
+        "dateCreated": {
+            "@id": "schema:dateCreated"
+        },
+        "hasOccupation": {
+            "@id": "schema:hasOccupation"
+        },
+        "member": {
+            "@id": "schema:member"
+        },
+        "location": {
+            "@id": "schema:location"
         },
         "agenda": {
             "@id": "raad:agenda"
