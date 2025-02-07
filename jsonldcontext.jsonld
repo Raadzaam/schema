@@ -19,6 +19,9 @@
         "Organization": {
             "@id": "schema:Organization"
         },
+        "Intangible": {
+            "@id": "schema:Intangible"
+        },
         "DigitalDocument": {
             "@id": "schema:DigitalDocument"
         },
