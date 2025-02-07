@@ -1,0 +1,302 @@
+@prefix : <https://raadzaam.nl/schema/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+### Classes
+
+# Vergaderingen en agenda's
+
+:Vergadering a rdfs:Class;
+  rdfs:label "Vergadering" ;
+  rdfs:comment "Een vergadering is een bijeenkomst van meerdere mensen die met elkaar spreken en/of afspraken maken over onderwerpen die op de agenda staan." ;
+  rdfs:subClassOf schema:Event .
+
+:Agenda a rdfs:Class;
+  rdfs:label "Agenda" ;
+  rdfs:comment "Een lijst met agendapunten." ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:Agendapunt a rdfs:Class ;
+  rdfs:label "Agendapunt" ;
+  rdfs:comment "Een punt op een agenda." ;
+  rdfs:subClassOf schema:CreativeWork .
+
+# Raadsinstrumenten
+
+:Raadsinstrument a rdfs:Class ;
+  rdfs:label "Raadsinstrument" ;
+  rdfs:comment "Een instrument dat gebruikt wordt door de gemeenteraad." ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:Besluitvormingsstuk a rdfs:Class ;
+  rdfs:label "Besluitvormingsstuk" ;
+  rdfs:comment "Een besluitvormingsstuk van de gemeenteraad." ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:Raadsvoorstel a rdfs:Class ;
+  rdfs:label "Raadsvoorstel" ;
+  rdfs:comment "Een raadsvoorstel aan de gemeenteraad." ;
+  rdfs:subClassOf :Besluitvormingsstuk .
+
+:Raadsbesluit a rdfs:Class ;
+  rdfs:label "Raadsbesluit" ;
+  rdfs:comment "Een besluit genomenen door de gemeenteraad." ;
+  rdfs:subClassOf :Besluitvormingsstuk .
+
+:Motie a rdfs:Class ;
+  rdfs:label "Motie" ;
+  rdfs:comment "Een motie ingediend op een raadsvoorstel." ;
+  rdfs:subClassOf :Besluitvormingsstuk .
+
+:Amendement a rdfs:Class ;
+  rdfs:label "Amendement" ;
+  rdfs:comment "Een amendement ingediend op een raadsvoorstel." ;
+  rdfs:subClassOf :Besluitvormingsstuk .
+
+:IngekomenStuk a rdfs:Class ;
+  rdfs:label "Ingekomen stuk" ;
+  rdfs:comment "Een stuk dat is ingediend door een raadslid." ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:Raadsbrief a rdfs:Class ;
+  rdfs:label "Raadsbrief" ;
+  rdfs:comment "Raadsbrief vanuit het college." ;
+  rdfs:subClassOf :IngekomenStuk .
+
+:BriefAanDeRaad a rdfs:Class ;
+  rdfs:label "Brief aan de raad" ;
+  rdfs:comment "Een brief, bv van een burger, gericht aan de gemeenteraad." ;
+  rdfs:subClassOf :IngekomenStuk .
+
+:Vraag a rdfs:Class ;
+  rdfs:label "Vraag" ;
+  rdfs:comment "Een vraag gesteld binnen de gemeenteraad." ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:MondelingeVraag a rdfs:Class ;
+  rdfs:label "Mondelinge vraag" ;
+  rdfs:comment "Een mondelinge vraag gesteld aan een wethouder?" ;
+  rdfs:subClassOf :Vraag .
+
+:SchriftelijkeVraag a rdfs:Class ;
+  rdfs:label "Schriftelijke vraag" ;
+  rdfs:comment "Een schriftelijke vraag gesteld aan een wethouder?" ;
+  rdfs:subClassOf :Vraag .
+
+:Memo a rdfs:Class ;
+  rdfs:label "Memo" ;
+  rdfs:comment "Een memo gemaakt door ?" ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:Toezegging a rdfs:Class ;
+  rdfs:label "Toezegging" ;
+  rdfs:comment "Een toezegging gedaan door een wethouder." ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:Antwoord a rdfs:Class ;
+  rdfs:label "Antwoord" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf :Raadsinstrument .
+
+:Agendavoorstel a rdfs:Class ;
+  rdfs:label "Agendavoorstel" ;
+  rdfs:comment "Een agendavoorstel aan de gemeenteraad." .
+
+:Initiatiefvoorstel a rdfs:Class ;
+  rdfs:label "Initiatiefvoorstel" ;
+  rdfs:comment "Een initiatiefvoorstel aan de gemeenteraad." .
+
+:Gesprekstafel a rdfs:Class ;
+  rdfs:label "Gesprekstafel" ;
+  rdfs:comment "Een gesprekstafel voor de gemeenteraad." .
+
+:Actualiteitenhalfuur a rdfs:Class ;
+  rdfs:label "Actualiteitenhalfuur" ;
+  rdfs:comment "Actualiteitenhalfuur" .
+
+:Debatverzoek a rdfs:Class ;
+  rdfs:label "Debatverzoek" ;
+  rdfs:comment "Debatverzoek" .
+
+# Acties
+
+:MaakActie a rdfs:Class ;
+  rdfs:label "MaakActie" ;
+  rdfs:comment "Een actie waarin raadsinstrument wordt gemaakt. Het resultaat van deze actie is een document met een versie van het raadsinstrument." ;
+  rdfs:subClassOf schema:CreateAction .
+
+:SpreekActie a rdfs:Class ;
+  rdfs:label "SpreekActie" ;
+  rdfs:comment "Een actie waarin een raadslid spreekt op een vergadering." ;
+  rdfs:subClassOf schema:CommunicateAction .
+
+# Notulen
+
+:Verslag a rdfs:Class ;
+  rdfs:label "Verslag" ;
+  rdfs:comment "Het verslag van een vergadering." ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:Tekstfragment a rdfs:Class ;
+  rdfs:label "Tekstfragment" ;
+  rdfs:comment "Een tekst fragment in een verslag." ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:Videofragment a rdfs:Class ;
+  rdfs:label "Videofragment" ;
+  rdfs:comment "Een fragment in een video object." ;
+  rdfs:subClassOf :VideoObject .
+
+:Transcript a rdfs:Class ;
+  rdfs:label "Transcript" ;
+  rdfs:comment "Een transcript van een video object." .
+
+:TranscriptFragment a rdfs:Class ;
+  rdfs:label "TranscriptFragment" ;
+  rdfs:comment "Een fragment in een transcript." .
+
+# Stemmen
+
+:Stemming a rdfs:Class ;
+  rdfs:label "Stemming" ;
+  rdfs:comment "Een stemming van de gemeenteraad." ;
+  rdfs:subClassOf schema:Action .
+
+# Fracties
+
+:Raadslid a rdfs:Class ;
+  rdfs:label "Raadslid" ;
+  rdfs:comment "Rol object voor een persoon die raadslid is voor een politieke partij in de gemeenteraad." ;
+  rdfs:subClassOf schema:Organization .
+
+:Partij a rdfs:Class ;
+  rdfs:label "Partij" ;
+  rdfs:comment "Een politieke partij in de gemeenteraad." ;
+  rdfs:subClassOf schema:Organization .
+
+:Fractie a rdfs:Class ;
+  rdfs:label "Fractie" ;
+  rdfs:comment "Een fractie in de gemeenteraad." ;
+  rdfs:subClassOf schema:Organization .
+
+:FractieLidmaatschap a rdfs:Class ;
+  rdfs:label "FractieLidmaatschap" ;
+  rdfs:comment "Het lidmaatschap van een fractie in de gemeenteraad." .
+
+# Misc
+
+:Beleidsveld a rdfs:Class ;
+  rdfs:label "Beleidsveld" ;
+  rdfs:comment "Een beleidsveld van de gemeenteraad." ;
+  rdfs:subClassOf schema:Thing .
+
+:IndienersLijst a rdfs:Class ;
+  rdfs:label "IndienersLijst" ;
+  rdfs:comment "Een lijst met indieners van een raadsinstrument." ;
+  rdfs:subClassOf schema:ItemList .
+
+# Properties
+
+:agenda a rdf:Property ;
+  rdfs:label "agenda" ;
+  rdfs:comment "De agenda voor een vergadering." ;
+  rdfs:domain :Vergadering ;
+  rdfs:range :Agenda .
+
+:agendapunt a rdf:Property ;
+  rdfs:label "agendaPunt" ;
+  rdfs:comment "Een agendapunt dat op de agenda staat." ;
+  rdfs:domain :Agenda ;
+  rdfs:range :AgendaPunt ;
+  rdfs:subPropertyOf schema:hasPart .
+
+:bijlage a rdf:Property ;
+  rdfs:label "bijlage" ;
+  rdfs:comment "Een bijlage bij een agendapunt." ;
+  rdfs:domain :AgendaPunt ;
+  rdfs:range schema:DigitalDocument .
+
+:antwoord a rdf:Property ;
+  rdfs:label "antwoord" ;
+  rdfs:comment "Een antwoord op een raadsinstrument." ;
+  rdfs:domain :Raadsintrument ;
+  rdfs:range :Antwoord .
+
+:beleidsveld a rdf:Property ;
+  rdfs:label "beleidsveld" ;
+  rdfs:comment "Het beleidsveld van een raadsinstrument." ;
+  rdfs:domain :Raadsinstrument ;
+  rdfs:range :Beleidsveld .
+
+:portefeuillehouder a rdf:Property ;
+  rdfs:label "portefeuillehouder" ;
+  rdfs:comment "De portefeuillehouden van een raadsinstrument." ;
+  rdfs:domain :Raadsinstrument ;
+  rdfs:range schema:Person, :Raadslid .
+
+:indieners a rdf:Property ;
+  rdfs:label "indieners" ;
+  rdfs:comment "De indieners van een raadsinstrument." ;
+  rdfs:domain :Raadsinstrument ;
+  rdfs:range schema:IndienersLijst .
+
+:persoon a rdf:Property ;
+  rdfs:label "persoon" ;
+  rdfs:comment "De persoon die de rol van raadslid heeft." ;
+  rdfs:domain :Raadslid ;
+  rdfs:range schema:Person .
+
+:partij a rdf:Property ;
+  rdfs:label "indiener persoon" ;
+  rdfs:comment "De partij van een raadslid." ;
+  rdfs:domain :Raadslid ;
+  rdfs:range raad:Partij .
+
+:videoOpname a rdf:Property ;
+  rdfs:label "videoOpname" ;
+  rdfs:comment "De video opname van de vergadering." ;
+  rdfs:domain :Vergadering, :SpreekActie ;
+  rdfs:range schema:VideoObject, :Videofragment .
+
+:verslag a rdf:Property ;
+  rdfs:label "verslag" ;
+  rdfs:comment "Het verslag van de vergadering." ;
+  rdfs:domain :Vergadering, :SpreekActie ;
+  rdfs:range :Verslag ;
+  rdfs:subPropertyOf schema:recordedIn .
+
+:stemObject a rdf:Property ;
+  rdfs:label "stemObject" ;
+  rdfs:comment "Raadsintrument waarover gestemd wordt." ;
+  rdfs:domain :Stemming ;
+  rdfs:range raad:Raadsinstrument .
+
+:stem a rdf:Property ;
+  rdfs:label "stem" ;
+  rdfs:comment "De stem actie binnen een stemming." ;
+  rdfs:domain :Stemming ;
+  rdfs:range schema:VoteAction .
+
+:inFractie a rdf:Property ;
+  rdfs:label "inFractie" ;
+  rdfs:comment "De fractie waaraan een persoon deelneemt." ;
+  rdfs:domain schema:Person ;
+  rdfs:range :Fractie ;
+  rdfs:subPropertyOf schema:member .
+
+# Enumerations
+
+# :GemeenteRaad a :MeetingType ;
+#     rdfs:label "GemeenteRaad" ;
+#     rdfs:comment "Vergadering van de gemeenteraad." .
+
+# :CommissieVergadering a :MeetingType ;
+#     rdfs:label "ComminisieVergadering" ;
+#     rdfs:comment "Vergadering van een raadscommissie." .
+
+# :Vragenuur a :MeetingType ;
+#     rdfs:label "Vragenuur" ;
+#     rdfs:comment "Vragenuur met de gemeenteraad." .

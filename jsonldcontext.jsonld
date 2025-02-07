@@ -1,0 +1,185 @@
+{
+    "@context": {
+        "raad": "https://raadzaam.nl/schema/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "schema": "https://schema.org/",
+        "Event": {
+            "@id": "schema:Event"
+        },
+        "Person": {
+            "@id": "schema:Person"
+        },
+        "Organization": {
+            "@id": "schema:Organization"
+        },
+        "DigitalDocument": {
+            "@id": "schema:DigitalDocument"
+        },
+        "CommunicateAction": {
+            "@id": "schema:CommunicateAction"
+        },
+        "VideoObject": {
+            "@id": "schema:VideoObject"
+        },
+        "Vergadering": {
+            "@id": "raad:Vergadering"
+        },
+        "Agenda": {
+            "@id": "raad:Agenda"
+        },
+        "AgendaPunt": {
+            "@id": "raad:Agenda"
+        },
+        "Raadsinstrument": {
+            "@id": "raad:Raadsinstrument"
+        },
+        "Besluitvormingsstuk": {
+            "@id": "raad:Besluitvormingsstuk"
+        },
+        "Raadsvoorstel": {
+            "@id": "raad:Raadsvoorstel"
+        },
+        "Raadsbesluit": {
+            "@id": "raad:Raadsbesluit"
+        },
+        "Motie": {
+            "@id": "raad:Motie"
+        },
+        "Amendement": {
+            "@id": "raad:Amendement"
+        },
+        "IngekomenStuk": {
+            "@id": "raad:IngekomenStuk"
+        },
+        "Raadsbrief": {
+            "@id": "raad:Raadsbrief"
+        },
+        "BriefAanDeRaad": {
+            "@id": "raad:BriefAanDeRaad"
+        },
+        "Vraag": {
+            "@id": "raad:Vraag"
+        },
+        "MondelingeVraag": {
+            "@id": "raad:MondelingeVraag"
+        },
+        "SchriftelijkeVraag": {
+            "@id": "raad:SchritelijkeVraag"
+        },
+        "Memo": {
+            "@id": "raad:Memo"
+        },
+        "Toezegging": {
+            "@id": "raad:Toezegging"
+        },
+        "Antwoord": {
+            "@id": "raad:Antwoord"
+        },
+        "Agendavoorstel": {
+            "@id": "raad:Agendavoorstel"
+        },
+        "Initiatiefvoorstel": {
+            "@id": "raad:Initiatiefvoorstel"
+        },
+        "Gesprekstafel": {
+            "@id": "raad:Gesprekstafel"
+        },
+        "Actualiteitenhalfuur": {
+            "@id": "raad:Actualiteitenhalfuur"
+        },
+        "Debatverzoek": {
+            "@id": "raad:Debatverzoek"
+        },
+        "MaakActie": {
+            "@id": "raad:Maakactie"
+        },
+        "SpreekActie": {
+            "@id": "raad:SpreekActie"
+        },
+        "Verslag": {
+            "@id": "raad:Verslag"
+        },
+        "Tekstfragment": {
+            "@id": "raad:Tekstfragment"
+        },
+        "Videofragment": {
+            "@id": "raad:Videofragment"
+        },
+        "Transcript": {
+            "@id": "raad:Transcript"
+        },
+        "TranscriptFragment": {
+            "@id": "raad:TranscriptFragment"
+        },
+        "Stemming": {
+            "@id": "raad:Stemming"
+        },
+        "VoteAction": {
+            "@id": "schema:VoteAction"
+        },
+        "Raadslid": {
+            "@id": "raad:Raadslid"
+        },
+        "Partij": {
+            "@id": "raad:Partij"
+        },
+        "Fractie": {
+            "@id": "raad:Fractie"
+        },
+        "FractieLidmaatschap": {
+            "@id": "raad:FractieLidmaatschap"
+        },
+        "Beleidsveld": {
+            "@id": "raad:Beleidsveld"
+        },
+        "IndienersLijst": {
+            "@id": "raad:Indienerslijst"
+        },
+        "agent": {
+            "@id": "schema:agent"
+        },
+        "agenda": {
+            "@id": "raad:agenda"
+        },
+        "agendapunt": {
+            "@id": "raad:agendapunt"
+        },
+        "bijlage": {
+            "@id": "raad:bijlage"
+        },
+        "atnwoord": {
+            "@id": "raad:antwoord"
+        },
+        "beleidsveld": {
+            "@id": "raad:beleidsveld"
+        },
+        "portefeuillehouder": {
+            "@id": "raad:portefeuillehouder"
+        },
+        "indieners": {
+            "@id": "raad:indieners"
+        },
+        "persoon": {
+            "@id": "raad:persoon"
+        },
+        "partij": {
+            "@id": "raad:partij"
+        },
+        "videoOpname": {
+            "@id": "raad:videoOpname"
+        },
+        "verslag": {
+            "@id": "raad:verslag"
+        },
+        "stemObject": {
+            "@id": "raad:stemObject"
+        },
+        "stem": {
+            "@id": "raad:stem"
+        },
+        "inFractie": {
+            "@id": "raad:inFractie"
+        }
+    }
+}
